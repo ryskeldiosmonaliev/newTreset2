@@ -31,7 +31,7 @@ public class City {
     public static Comparator<City> cityComparator = new Comparator<City>() {
         @Override
         public int compare(City o1, City o2) {
-            return o1.code - o2.code;
+            return o2.code - o1.code;
         }
     };
 
