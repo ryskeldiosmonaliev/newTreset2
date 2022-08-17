@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class City {
+public class City implements Comparable<City>{
     private int code;
     private String nameCity;
 
@@ -28,11 +28,15 @@ public class City {
                 ", nameCity='" + nameCity + '\'' +
                 '}';
     }
-    public static Comparator<City> cityComparator = new Comparator<City>() {
-        @Override
-        public int compare(City o1, City o2) {
-            return o2.code - o1.code;
-        }
-    };
+//    public static Comparator<City> cityComparator = new Comparator<City>() {
+//        @Override
+//        public int compare(City o1, City o2) {
+//            return o2.code - o1.code;
+//        }
+//    };
 
+    @Override
+    public int compareTo(City o) {
+        return o.code-this.code;
+    }
 }
